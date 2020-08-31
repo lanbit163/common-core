@@ -148,4 +148,15 @@ public class JUtil {
         fos.write(content);
         fos.close();
     }
+
+    public static String readLib(InputStream in){
+        try {
+            BufferedReader reader = new BufferedReader(new InputStreamReader(in));
+            String s = reader.readLine();
+            return s;
+        } catch (IOException e) {
+        }
+        return null;
+    }
+
 }
