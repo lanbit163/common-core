@@ -60,7 +60,7 @@ public class JUtil {
         return null;
     }
 
-    private static void saveToFile(String fileName,
+    public static void saveToFile(String fileName,
                                    BigInteger mod, BigInteger exp) throws IOException {
         ObjectOutputStream oout = new ObjectOutputStream(
                 new BufferedOutputStream(new FileOutputStream(fileName)));
@@ -73,7 +73,7 @@ public class JUtil {
             oout.close();
         }
     }
-    private static RSAPublicKey readPublicKey(String fileName) throws IOException {
+    public static RSAPublicKey readPublicKey(String fileName) throws IOException {
         InputStream in = new FileInputStream(fileName);
         return readPublicKey(in);
     }
