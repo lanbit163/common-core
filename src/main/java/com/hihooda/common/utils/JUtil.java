@@ -148,32 +148,4 @@ public class JUtil {
         fos.write(content);
         fos.close();
     }
-
-//    public static void main(String[] args) throws NoSuchAlgorithmException, InvalidKeyException, NoSuchPaddingException, IllegalBlockSizeException, BadPaddingException, IOException {
-//        JUtil rsa = new JUtil();
-//        String msg = "You are not alone.";
-//        KeyPairGenerator keyPairGen = KeyPairGenerator.getInstance("RSA");
-//        keyPairGen.initialize(2048);
-//        KeyPair keyPair = keyPairGen.generateKeyPair();
-//        RSAPrivateKey privateKey = (RSAPrivateKey)keyPair.getPrivate();
-//        RSAPublicKey publicKey = (RSAPublicKey)keyPair.getPublic();
-//        saveToFile("key.pub", publicKey.getModulus(), publicKey.getPublicExponent());
-//        saveToFile("key", privateKey.getModulus(), privateKey.getPrivateExponent());
-//
-//        RSAPublicKey pub = readPublicKey("key.pub");
-//        RSAPrivateKey pri = readPrivateKey("key");
-//
-//        byte[] srcBytes = msg.getBytes();
-//        byte[] resultBytes = rsa.e(pri, srcBytes);
-//
-//        JUtil.saveBytes("csr",resultBytes);
-//        resultBytes = JUtil.readBytes("csr");
-//
-//        //用私钥解密
-//        byte[] decBytes = rsa.d(pub, resultBytes);
-//
-//        System.out.println("明文是:" + msg+ "\n" + srcBytes.length);
-//        System.out.println("加密后是:" + new String(resultBytes) + "\n" + resultBytes.length);
-//        System.out.println("解密后是:" + new String(decBytes));
-//    }
 }
